@@ -1,7 +1,7 @@
 # RAG-AI
 Deploying Local AI with RAG, Ollama & ChromaDB 
 With the rise of AI, businesses are seeking secure, cost-effective, and scalable solutions to leverage large language models without relying on cloud-based APIs. That's why I built a local AI stack using Ollama, ChromaDB, and RAG (Retrieval-Augmented Generation)—a powerful, self-hosted solution for enterprise AI.
-🔹 Why Local AI?
+🔹 Why Local AI? 
 ✅ Privacy & Security – Keep sensitive data in-house.
 ✅ Cost-Effective – No API costs or cloud fees.
 ✅ Customizable – Train AI on your own documents & PDFs.
