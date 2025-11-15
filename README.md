@@ -183,4 +183,17 @@ pip install chromadb requests fastapi uvicorn ollama llama-index langchain llama
 ```
 
 ## Step 4: Create a Python API to Connect ChromaDB and Ollama
-Create a file called `rag_api.py` and add the following code:
+Create a file called `rag_api.py`.
+
+# Step 5: starting rag_api.py service and uploading your file and query
+```sh
+uvicorn rag-api-v2:app --host 0.0.0.0 --port 5000 --workers 1
+```
+```sh
+curl -X POST "http://localhost:5000/upload_qa/" -F "file=@/home/db/part2.json"
+curl -X POST "http://localhost:5000/upload_file/" -F "file=@/home/db/part1.txt"
+```
+```sh
+curl -X POST "http://localhost:5000/query/" -H "Content-Type: application/json" -d '{"user_input": "Are you my own AI?"}'
+```
+
