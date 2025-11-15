@@ -18,11 +18,23 @@ With the rise of AI, businesses are seeking secure, cost-effective, and scalable
 ✅ Deploy an API for seamless integration
 🔍 Want to Set Up Your Own Local AI?
 I’ve documented the full installation process, including Docker, Python setup, and API development. This guide walks you through:
+\n
 1️⃣ Deploying Ollama & ChromaDB with Docker
 2️⃣ Downloading & running LLM models locally
 3️⃣ Building a FastAPI backend for querying data
 4️⃣ Adding PDF ingestion to enrich AI responses
 5️⃣ Creating an AI assistant tailored to your business
 📌 Full Guide Here 👉 https://lnkd.in/eG-RNbqB
+========================================================
+#for runing 
+uvicorn rag-api:app --host 0.0.0.0 --port 5000 --workers 1 
+#for query
+curl -X POST "http://localhost:5000/query/" -H "Content-Type: application/json" -d '{"user_input": "آیا امکان غیرفعالسازی پرونده مالیاتی درکارپوشه وجود دارد؟"}'
+\n
+#for upload file for traning txt or json
+curl -X POST "http://localhost:5000/upload_qa/" -F "file=@/home/db/bedon shenasname.json"
+\n
+curl -X POST "http://localhost:5000/upload_file/" -F "file=@/home/db/part1.txt"
+======================================================================
 Are you exploring local AI for your business? What challenges are you facing in AI deployment? Drop your thoughts in the comments! 👇
 hashtag#AI hashtag#LocalAI hashtag#RAG hashtag#Ollama hashtag#ChromaDB hashtag#LLM hashtag#MachineLearning hashtag#opensource
