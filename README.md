@@ -167,3 +167,20 @@ ollama run mistral "Hello, how are you?"
 
 
 ```
+## Step 3: Install Python and Required Libraries
+You'll need Python for the backend API.
+
+### 3.1 Install Python Dependencies
+First, install Python (if not already installed), then create a virtual environment:
+```sh
+python -m venv rag_env
+source rag_env/bin/activate   # For Linux/macOS
+rag_env\Scripts\activate      # For Windows
+```
+Now install dependencies:
+```sh
+pip install chromadb requests fastapi uvicorn ollama llama-index langchain llama-index-readers-file llama-index-embeddings-openai pypdf
+```
+
+## Step 4: Create a Python API to Connect ChromaDB and Ollama
+Create a file called `rag_api.py` and add the following code:
